@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="VITADIETModelStoreContainer" CdmEntityContainer="VITADIETEntities">
+    <EntitySetMapping Name="DIETA">
+      <EntityTypeMapping TypeName="VITADIETModel.DIETA">
+        <MappingFragment StoreEntitySet="DIETA">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="CEDULA_PACIENTE" ColumnName="CEDULA_PACIENTE" />
+          <ScalarProperty Name="COMIDA" ColumnName="COMIDA" />
+          <ScalarProperty Name="DOMICILIO" ColumnName="DOMICILIO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HISTORIAL">
+      <EntityTypeMapping TypeName="VITADIETModel.HISTORIAL">
+        <MappingFragment StoreEntitySet="HISTORIAL">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IDPACIENTE" ColumnName="IDPACIENTE" />
+          <ScalarProperty Name="HISTORIAL1" ColumnName="HISTORIAL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NUTRICIONISTA">
+      <EntityTypeMapping TypeName="VITADIETModel.NUTRICIONISTA">
+        <MappingFragment StoreEntitySet="NUTRICIONISTA">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="APELLIDO" ColumnName="APELLIDO" />
+          <ScalarProperty Name="FECHA_NACIMIENTO" ColumnName="FECHA_NACIMIENTO" />
+          <ScalarProperty Name="CEDULA_NUTRICIONISTA" ColumnName="CEDULA_NUTRICIONISTA" />
+          <ScalarProperty Name="TARJETA_PROFESIONAL" ColumnName="TARJETA_PROFESIONAL" />
+          <ScalarProperty Name="GENERO" ColumnName="GENERO" />
+          <ScalarProperty Name="CELULAR" ColumnName="CELULAR" />
+          <ScalarProperty Name="CORREO" ColumnName="CORREO" />
+          <ScalarProperty Name="IDUSUARIO" ColumnName="IDUSUARIO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PACIENTE">
+      <EntityTypeMapping TypeName="VITADIETModel.PACIENTE">
+        <MappingFragment StoreEntitySet="PACIENTE">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="APELLIDO" ColumnName="APELLIDO" />
+          <ScalarProperty Name="FECHA_NACIMIENTO" ColumnName="FECHA_NACIMIENTO" />
+          <ScalarProperty Name="CEDULA_PACIENTE" ColumnName="CEDULA_PACIENTE" />
+          <ScalarProperty Name="GENERO" ColumnName="GENERO" />
+          <ScalarProperty Name="RH" ColumnName="RH" />
+          <ScalarProperty Name="DOMICILIO" ColumnName="DOMICILIO" />
+          <ScalarProperty Name="OBJETIVOS" ColumnName="OBJETIVOS" />
+          <ScalarProperty Name="TIEMPO_ESPERADO" ColumnName="TIEMPO_ESPERADO" />
+          <ScalarProperty Name="CELULAR" ColumnName="CELULAR" />
+          <ScalarProperty Name="CORREO" ColumnName="CORREO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PQR">
+      <EntityTypeMapping TypeName="VITADIETModel.PQR">
+        <MappingFragment StoreEntitySet="PQR">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NOMBRE_PACIENTE" ColumnName="NOMBRE_PACIENTE" />
+          <ScalarProperty Name="CALIFICACION" ColumnName="CALIFICACION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RUTA">
+      <EntityTypeMapping TypeName="VITADIETModel.RUTA">
+        <MappingFragment StoreEntitySet="RUTA">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DESTINOS" ColumnName="DESTINOS" />
+          <ScalarProperty Name="COCINAS" ColumnName="COCINAS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="USUARIO">
+      <EntityTypeMapping TypeName="VITADIETModel.USUARIO">
+        <MappingFragment StoreEntitySet="USUARIO">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ROL" ColumnName="ROL" />
+          <ScalarProperty Name="CONTRASENA" ColumnName="CONTRASENA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

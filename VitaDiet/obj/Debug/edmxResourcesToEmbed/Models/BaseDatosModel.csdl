@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="VITADIETModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="DIETA">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NOMBRE" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="CEDULA_PACIENTE" Type="Int32" />
+    <Property Name="COMIDA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DOMICILIO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="HISTORIAL">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IDPACIENTE" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="HISTORIAL1" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="PACIENTE" Relationship="Self.FK__HISTORIAL__IDPAC__182C9B23" FromRole="HISTORIAL" ToRole="PACIENTE" />
+  </EntityType>
+  <EntityType Name="NUTRICIONISTA">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NOMBRE" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="APELLIDO" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="FECHA_NACIMIENTO" Type="DateTime" Precision="3" />
+    <Property Name="CEDULA_NUTRICIONISTA" Type="Int32" />
+    <Property Name="TARJETA_PROFESIONAL" Type="Int32" />
+    <Property Name="GENERO" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="CELULAR" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="CORREO" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="IDUSUARIO" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="USUARIO" Relationship="Self.FK__NUTRICION__IDUSU__20C1E124" FromRole="NUTRICIONISTA" ToRole="USUARIO" />
+  </EntityType>
+  <EntityType Name="PACIENTE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NOMBRE" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="APELLIDO" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="FECHA_NACIMIENTO" Type="DateTime" Precision="3" />
+    <Property Name="CEDULA_PACIENTE" Type="Int32" />
+    <Property Name="GENERO" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="RH" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="DOMICILIO" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="OBJETIVOS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TIEMPO_ESPERADO" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="CELULAR" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="CORREO" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="HISTORIAL" Relationship="Self.FK__HISTORIAL__IDPAC__182C9B23" FromRole="PACIENTE" ToRole="HISTORIAL" />
+  </EntityType>
+  <EntityType Name="PQR">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NOMBRE_PACIENTE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CALIFICACION" Type="Int32" />
+  </EntityType>
+  <EntityType Name="RUTA">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DESTINOS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="COCINAS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="USUARIO">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ROL" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="CONTRASENA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="NUTRICIONISTA" Relationship="Self.FK__NUTRICION__IDUSU__20C1E124" FromRole="USUARIO" ToRole="NUTRICIONISTA" />
+  </EntityType>
+  <Association Name="FK__HISTORIAL__IDPAC__182C9B23">
+    <End Role="PACIENTE" Type="Self.PACIENTE" Multiplicity="0..1" />
+    <End Role="HISTORIAL" Type="Self.HISTORIAL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PACIENTE">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="HISTORIAL">
+        <PropertyRef Name="IDPACIENTE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__NUTRICION__IDUSU__20C1E124">
+    <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="0..1" />
+    <End Role="NUTRICIONISTA" Type="Self.NUTRICIONISTA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="USUARIO">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="NUTRICIONISTA">
+        <PropertyRef Name="IDUSUARIO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="VITADIETEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="DIETA" EntityType="Self.DIETA" />
+    <EntitySet Name="HISTORIAL" EntityType="Self.HISTORIAL" />
+    <EntitySet Name="NUTRICIONISTA" EntityType="Self.NUTRICIONISTA" />
+    <EntitySet Name="PACIENTE" EntityType="Self.PACIENTE" />
+    <EntitySet Name="PQR" EntityType="Self.PQR" />
+    <EntitySet Name="RUTA" EntityType="Self.RUTA" />
+    <EntitySet Name="USUARIO" EntityType="Self.USUARIO" />
+    <AssociationSet Name="FK__HISTORIAL__IDPAC__182C9B23" Association="Self.FK__HISTORIAL__IDPAC__182C9B23">
+      <End Role="PACIENTE" EntitySet="PACIENTE" />
+      <End Role="HISTORIAL" EntitySet="HISTORIAL" />
+    </AssociationSet>
+    <AssociationSet Name="FK__NUTRICION__IDUSU__20C1E124" Association="Self.FK__NUTRICION__IDUSU__20C1E124">
+      <End Role="USUARIO" EntitySet="USUARIO" />
+      <End Role="NUTRICIONISTA" EntitySet="NUTRICIONISTA" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
