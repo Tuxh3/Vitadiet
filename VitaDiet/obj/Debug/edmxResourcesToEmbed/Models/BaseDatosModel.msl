@@ -12,31 +12,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="HISTORIAL">
-      <EntityTypeMapping TypeName="VITADIETModel.HISTORIAL">
-        <MappingFragment StoreEntitySet="HISTORIAL">
-          <ScalarProperty Name="ID" ColumnName="ID" />
-          <ScalarProperty Name="IDPACIENTE" ColumnName="IDPACIENTE" />
-          <ScalarProperty Name="HISTORIAL1" ColumnName="HISTORIAL" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="NUTRICIONISTA">
-      <EntityTypeMapping TypeName="VITADIETModel.NUTRICIONISTA">
-        <MappingFragment StoreEntitySet="NUTRICIONISTA">
-          <ScalarProperty Name="ID" ColumnName="ID" />
-          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
-          <ScalarProperty Name="APELLIDO" ColumnName="APELLIDO" />
-          <ScalarProperty Name="FECHA_NACIMIENTO" ColumnName="FECHA_NACIMIENTO" />
-          <ScalarProperty Name="CEDULA_NUTRICIONISTA" ColumnName="CEDULA_NUTRICIONISTA" />
-          <ScalarProperty Name="TARJETA_PROFESIONAL" ColumnName="TARJETA_PROFESIONAL" />
-          <ScalarProperty Name="GENERO" ColumnName="GENERO" />
-          <ScalarProperty Name="CELULAR" ColumnName="CELULAR" />
-          <ScalarProperty Name="CORREO" ColumnName="CORREO" />
-          <ScalarProperty Name="IDUSUARIO" ColumnName="IDUSUARIO" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="PACIENTE">
       <EntityTypeMapping TypeName="VITADIETModel.PACIENTE">
         <MappingFragment StoreEntitySet="PACIENTE">
@@ -61,24 +36,6 @@
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="NOMBRE_PACIENTE" ColumnName="NOMBRE_PACIENTE" />
           <ScalarProperty Name="CALIFICACION" ColumnName="CALIFICACION" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="RUTA">
-      <EntityTypeMapping TypeName="VITADIETModel.RUTA">
-        <MappingFragment StoreEntitySet="RUTA">
-          <ScalarProperty Name="ID" ColumnName="ID" />
-          <ScalarProperty Name="DESTINOS" ColumnName="DESTINOS" />
-          <ScalarProperty Name="COCINAS" ColumnName="COCINAS" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="USUARIO">
-      <EntityTypeMapping TypeName="VITADIETModel.USUARIO">
-        <MappingFragment StoreEntitySet="USUARIO">
-          <ScalarProperty Name="ID" ColumnName="ID" />
-          <ScalarProperty Name="ROL" ColumnName="ROL" />
-          <ScalarProperty Name="CONTRASENA" ColumnName="CONTRASENA" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
