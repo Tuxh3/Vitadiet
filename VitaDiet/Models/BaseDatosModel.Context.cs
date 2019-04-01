@@ -32,5 +32,8 @@ namespace VitaDiet.Models
         public virtual DbSet<PQR> PQR { get; set; }
         public virtual DbSet<RUTA> RUTA { get; set; }
         public virtual DbSet<USUARIO> USUARIO { get; set; }
+        public virtual DbSet<DISTRIBUIDOR> DISTRIBUIDOR { get; set; }
+
+        public System.Data.Entity.DbSet<VitaDiet.Models.PacienteUser> PacienteUsers { get; set; }
     }
 }
