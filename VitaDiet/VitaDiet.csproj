@@ -137,7 +137,6 @@
     <Compile Include="Controllers\DISTRIBUIDORsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\NUTRICIONISTAsController.cs" />
-    <Compile Include="Controllers\PACIENTEsController.cs" />
     <Compile Include="Controllers\PacienteUsersController.cs" />
     <Compile Include="Controllers\RUTAsController.cs" />
     <Compile Include="Controllers\USUARIOsController.cs" />
@@ -254,11 +253,6 @@
     <Content Include="Views\DISTRIBUIDORs\Details.cshtml" />
     <Content Include="Views\DISTRIBUIDORs\Edit.cshtml" />
     <Content Include="Views\DISTRIBUIDORs\Index.cshtml" />
-    <Content Include="Views\PACIENTEs\Create.cshtml" />
-    <Content Include="Views\PACIENTEs\Delete.cshtml" />
-    <Content Include="Views\PACIENTEs\Details.cshtml" />
-    <Content Include="Views\PACIENTEs\Edit.cshtml" />
-    <Content Include="Views\PACIENTEs\Index.cshtml" />
     <Content Include="Views\USUARIOs\Create.cshtml" />
     <Content Include="Views\USUARIOs\Delete.cshtml" />
     <Content Include="Views\USUARIOs\Details.cshtml" />
