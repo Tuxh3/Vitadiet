@@ -14,12 +14,6 @@ namespace VitaDiet.Models
     
     public partial class PACIENTE
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public PACIENTE()
-        {
-            this.HISTORIAL = new HashSet<HISTORIAL>();
-        }
-    
         public string ID { get; set; }
         public string NOMBRE { get; set; }
         public string APELLIDO { get; set; }
@@ -32,8 +26,5 @@ namespace VitaDiet.Models
         public string TIEMPO_ESPERADO { get; set; }
         public string CELULAR { get; set; }
         public string CORREO { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<HISTORIAL> HISTORIAL { get; set; }
     }
 }

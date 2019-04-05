@@ -8,7 +8,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{4598E1BC-876F-48CA-B18B-EFDB3855E62E}</ProjectGuid>
+    <ProjectGuid>{D3D799D1-C69F-4DA8-AA27-1B9E482E7BCD}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -134,9 +134,10 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\DIETAsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\NUTRICIONISTAsController.cs" />
-    <Compile Include="Controllers\RUTAsController.cs" />
+    <Compile Include="Controllers\PACIENTEsController.cs" />
+    <Compile Include="Controllers\PQRsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -158,22 +159,10 @@
     <Compile Include="Models\DIETA.cs">
       <DependentUpon>BaseDatosModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\HISTORIAL.cs">
-      <DependentUpon>BaseDatosModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\NUTRICIONISTA.cs">
-      <DependentUpon>BaseDatosModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\PACIENTE.cs">
       <DependentUpon>BaseDatosModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\PQR.cs">
-      <DependentUpon>BaseDatosModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\RUTA.cs">
-      <DependentUpon>BaseDatosModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\USUARIO.cs">
       <DependentUpon>BaseDatosModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -231,16 +220,21 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\NUTRICIONISTAs\Create.cshtml" />
-    <Content Include="Views\NUTRICIONISTAs\Delete.cshtml" />
-    <Content Include="Views\NUTRICIONISTAs\Details.cshtml" />
-    <Content Include="Views\NUTRICIONISTAs\Edit.cshtml" />
-    <Content Include="Views\NUTRICIONISTAs\Index.cshtml" />
-    <Content Include="Views\RUTAs\Create.cshtml" />
-    <Content Include="Views\RUTAs\Delete.cshtml" />
-    <Content Include="Views\RUTAs\Details.cshtml" />
-    <Content Include="Views\RUTAs\Edit.cshtml" />
-    <Content Include="Views\RUTAs\Index.cshtml" />
+    <Content Include="Views\DIETAs\Create.cshtml" />
+    <Content Include="Views\DIETAs\Delete.cshtml" />
+    <Content Include="Views\DIETAs\Details.cshtml" />
+    <Content Include="Views\DIETAs\Edit.cshtml" />
+    <Content Include="Views\DIETAs\Index.cshtml" />
+    <Content Include="Views\PACIENTEs\Create.cshtml" />
+    <Content Include="Views\PACIENTEs\Delete.cshtml" />
+    <Content Include="Views\PACIENTEs\Details.cshtml" />
+    <Content Include="Views\PACIENTEs\Edit.cshtml" />
+    <Content Include="Views\PACIENTEs\Index.cshtml" />
+    <Content Include="Views\PQRs\Create.cshtml" />
+    <Content Include="Views\PQRs\Delete.cshtml" />
+    <Content Include="Views\PQRs\Details.cshtml" />
+    <Content Include="Views\PQRs\Edit.cshtml" />
+    <Content Include="Views\PQRs\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -277,9 +271,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>52179</DevelopmentServerPort>
+          <DevelopmentServerPort>52327</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:52179/</IISUrl>
+          <IISUrl>http://localhost:52327/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
