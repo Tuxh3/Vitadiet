@@ -77,6 +77,8 @@ C:\Users\Administrador\source\repos\VitaDiet\VitaDiet\bin\Antlr3.Runtime.pdb
 C:\Users\Administrador\source\repos\VitaDiet\VitaDiet\bin\System.Diagnostics.DiagnosticSource.xml
 C:\Users\Administrador\source\repos\VitaDiet\VitaDiet\bin\Microsoft.AspNet.TelemetryCorrelation.xml
 C:\Users\Administrador\source\repos\VitaDiet\VitaDiet\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Administrador\source\repos\VitaDiet\VitaDiet\bin\es\EntityFramework.resources.dll
+C:\Users\Administrador\source\repos\VitaDiet\VitaDiet\bin\es\EntityFramework.SqlServer.resources.dll
 C:\Users\Administrador\source\repos\VitaDiet\VitaDiet\bin\es\System.Web.Helpers.resources.dll
 C:\Users\Administrador\source\repos\VitaDiet\VitaDiet\bin\es\System.Web.Mvc.resources.dll
 C:\Users\Administrador\source\repos\VitaDiet\VitaDiet\bin\es\System.Web.Optimization.resources.dll
@@ -84,10 +86,8 @@ C:\Users\Administrador\source\repos\VitaDiet\VitaDiet\bin\es\System.Web.Razor.re
 C:\Users\Administrador\source\repos\VitaDiet\VitaDiet\bin\es\System.Web.WebPages.resources.dll
 C:\Users\Administrador\source\repos\VitaDiet\VitaDiet\bin\es\System.Web.WebPages.Deployment.resources.dll
 C:\Users\Administrador\source\repos\VitaDiet\VitaDiet\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\Administrador\source\repos\VitaDiet\VitaDiet\obj\Debug\VitaDiet.csprojAssemblyReference.cache
 C:\Users\Administrador\source\repos\VitaDiet\VitaDiet\obj\Debug\VitaDiet.csproj.CoreCompileInputs.cache
 C:\Users\Administrador\source\repos\VitaDiet\VitaDiet\obj\Debug\VitaDiet.csproj.CopyComplete
 C:\Users\Administrador\source\repos\VitaDiet\VitaDiet\obj\Debug\VitaDiet.dll
 C:\Users\Administrador\source\repos\VitaDiet\VitaDiet\obj\Debug\VitaDiet.pdb
-C:\Users\Administrador\source\repos\VitaDiet\VitaDiet\bin\es\EntityFramework.resources.dll
-C:\Users\Administrador\source\repos\VitaDiet\VitaDiet\bin\es\EntityFramework.SqlServer.resources.dll
-C:\Users\Administrador\source\repos\VitaDiet\VitaDiet\obj\Debug\VitaDiet.csprojAssemblyReference.cache
