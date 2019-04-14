@@ -134,9 +134,12 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\DISTRIBUIDORsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\NUTRICIONISTAsController.cs" />
+    <Compile Include="Controllers\PacienteUsersController.cs" />
     <Compile Include="Controllers\RUTAsController.cs" />
+    <Compile Include="Controllers\USUARIOsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -158,6 +161,9 @@
     <Compile Include="Models\DIETA.cs">
       <DependentUpon>BaseDatosModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\DISTRIBUIDOR.cs">
+      <DependentUpon>BaseDatosModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\HISTORIAL.cs">
       <DependentUpon>BaseDatosModel.tt</DependentUpon>
     </Compile>
@@ -167,6 +173,7 @@
     <Compile Include="Models\PACIENTE.cs">
       <DependentUpon>BaseDatosModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\PacienteUser.cs" />
     <Compile Include="Models\PQR.cs">
       <DependentUpon>BaseDatosModel.tt</DependentUpon>
     </Compile>
@@ -241,6 +248,17 @@
     <Content Include="Views\RUTAs\Details.cshtml" />
     <Content Include="Views\RUTAs\Edit.cshtml" />
     <Content Include="Views\RUTAs\Index.cshtml" />
+    <Content Include="Views\DISTRIBUIDORs\Create.cshtml" />
+    <Content Include="Views\DISTRIBUIDORs\Delete.cshtml" />
+    <Content Include="Views\DISTRIBUIDORs\Details.cshtml" />
+    <Content Include="Views\DISTRIBUIDORs\Edit.cshtml" />
+    <Content Include="Views\DISTRIBUIDORs\Index.cshtml" />
+    <Content Include="Views\USUARIOs\Create.cshtml" />
+    <Content Include="Views\USUARIOs\Delete.cshtml" />
+    <Content Include="Views\USUARIOs\Details.cshtml" />
+    <Content Include="Views\USUARIOs\Edit.cshtml" />
+    <Content Include="Views\USUARIOs\Index.cshtml" />
+    <Content Include="Views\PacienteUsers\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

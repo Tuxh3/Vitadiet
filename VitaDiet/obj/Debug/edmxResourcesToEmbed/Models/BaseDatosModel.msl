@@ -76,9 +76,22 @@
     <EntitySetMapping Name="USUARIO">
       <EntityTypeMapping TypeName="VITADIETModel.USUARIO">
         <MappingFragment StoreEntitySet="USUARIO">
+          <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="ROL" ColumnName="ROL" />
           <ScalarProperty Name="CONTRASENA" ColumnName="CONTRASENA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DISTRIBUIDOR">
+      <EntityTypeMapping TypeName="VITADIETModel.DISTRIBUIDOR">
+        <MappingFragment StoreEntitySet="DISTRIBUIDOR">
+          <ScalarProperty Name="CORREO" ColumnName="CORREO" />
+          <ScalarProperty Name="CELULAR" ColumnName="CELULAR" />
+          <ScalarProperty Name="APELLIDO" ColumnName="APELLIDO" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="CEDULA_NUTRICIONISTA" ColumnName="CEDULA_NUTRICIONISTA" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

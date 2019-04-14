@@ -23,6 +23,7 @@ namespace VitaDiet.Models
         public string ID { get; set; }
         public string ROL { get; set; }
         public string CONTRASENA { get; set; }
+        public string USERNAME { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<NUTRICIONISTA> NUTRICIONISTA { get; set; }

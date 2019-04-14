@@ -77,6 +77,7 @@
     <Property Name="ROL" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="CONTRASENA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="NUTRICIONISTA" Relationship="Self.FK__NUTRICION__IDUSU__20C1E124" FromRole="USUARIO" ToRole="NUTRICIONISTA" />
+    <Property Name="USERNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
   </EntityType>
   <Association Name="FK__HISTORIAL__IDPAC__182C9B23">
     <End Role="PACIENTE" Type="Self.PACIENTE" Multiplicity="0..1" />
@@ -118,5 +119,17 @@
       <End Role="USUARIO" EntitySet="USUARIO" />
       <End Role="NUTRICIONISTA" EntitySet="NUTRICIONISTA" />
     </AssociationSet>
+    <EntitySet Name="DISTRIBUIDOR" EntityType="VITADIETModel.DISTRIBUIDOR" />
   </EntityContainer>
+  <EntityType Name="DISTRIBUIDOR">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="CEDULA_NUTRICIONISTA" Type="Int32" />
+    <Property Name="NOMBRE" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="APELLIDO" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="CELULAR" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="CORREO" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+  </EntityType>
 </Schema>
