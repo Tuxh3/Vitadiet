@@ -14,11 +14,22 @@ namespace VitaDiet.Models
     
     public partial class DISTRIBUIDOR
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public DISTRIBUIDOR()
+        {
+            this.RUTA = new HashSet<RUTA>();
+        }
+    
         public string ID { get; set; }
         public Nullable<int> CEDULA_NUTRICIONISTA { get; set; }
         public string NOMBRE { get; set; }
         public string APELLIDO { get; set; }
         public string CELULAR { get; set; }
         public string CORREO { get; set; }
+        public string USUARIOID { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<RUTA> RUTA { get; set; }
+        public virtual USUARIO USUARIO { get; set; }
     }
 }

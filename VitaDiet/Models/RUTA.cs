@@ -14,8 +14,19 @@ namespace VitaDiet.Models
     
     public partial class RUTA
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public RUTA()
+        {
+            this.COCINASet = new HashSet<COCINASet>();
+        }
+    
         public string ID { get; set; }
         public string DESTINOS { get; set; }
         public string COCINAS { get; set; }
+        public string DISTRIBUIDORID { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<COCINASet> COCINASet { get; set; }
+        public virtual DISTRIBUIDOR DISTRIBUIDOR { get; set; }
     }
 }

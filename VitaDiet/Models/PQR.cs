@@ -17,5 +17,8 @@ namespace VitaDiet.Models
         public string ID { get; set; }
         public string NOMBRE_PACIENTE { get; set; }
         public Nullable<int> CALIFICACION { get; set; }
+        public string PACIENTEID { get; set; }
+    
+        public virtual PACIENTE PACIENTE { get; set; }
     }
 }

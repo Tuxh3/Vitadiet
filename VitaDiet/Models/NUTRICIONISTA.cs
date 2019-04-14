@@ -14,6 +14,12 @@ namespace VitaDiet.Models
     
     public partial class NUTRICIONISTA
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public NUTRICIONISTA()
+        {
+            this.CHEQUEO = new HashSet<CHEQUEO>();
+        }
+    
         public string ID { get; set; }
         public string NOMBRE { get; set; }
         public string APELLIDO { get; set; }
@@ -26,5 +32,7 @@ namespace VitaDiet.Models
         public string IDUSUARIO { get; set; }
     
         public virtual USUARIO USUARIO { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<CHEQUEO> CHEQUEO { get; set; }
     }
 }

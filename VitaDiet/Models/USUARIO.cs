@@ -18,6 +18,9 @@ namespace VitaDiet.Models
         public USUARIO()
         {
             this.NUTRICIONISTA = new HashSet<NUTRICIONISTA>();
+            this.COCINERO = new HashSet<COCINERO>();
+            this.DISTRIBUIDOR = new HashSet<DISTRIBUIDOR>();
+            this.PACIENTE = new HashSet<PACIENTE>();
         }
     
         public string ID { get; set; }
@@ -27,5 +30,11 @@ namespace VitaDiet.Models
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<NUTRICIONISTA> NUTRICIONISTA { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<COCINERO> COCINERO { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<DISTRIBUIDOR> DISTRIBUIDOR { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<PACIENTE> PACIENTE { get; set; }
     }
 }

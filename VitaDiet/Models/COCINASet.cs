@@ -12,21 +12,20 @@ namespace VitaDiet.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class DIETA
+    public partial class COCINASet
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public DIETA()
+        public COCINASet()
         {
-            this.PACIENTE = new HashSet<PACIENTE>();
+            this.COCINERO = new HashSet<COCINERO>();
         }
     
-        public string ID { get; set; }
-        public string NOMBRE { get; set; }
-        public Nullable<int> CEDULA_PACIENTE { get; set; }
-        public string COMIDA { get; set; }
-        public string DOMICILIO { get; set; }
+        public int Id { get; set; }
+        public string UBICACION { get; set; }
+        public string RUTAID { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PACIENTE> PACIENTE { get; set; }
+        public virtual ICollection<COCINERO> COCINERO { get; set; }
+        public virtual RUTA RUTA { get; set; }
     }
 }

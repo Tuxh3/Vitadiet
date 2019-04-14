@@ -12,13 +12,14 @@ namespace VitaDiet.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class HISTORIAL
+    public partial class CHEQUEO
     {
-        public string ID { get; set; }
-        public string IDPACIENTE { get; set; }
-        public string HISTORIAL1 { get; set; }
-        public string HISTORIAL11 { get; set; }
+        public int ID { get; set; }
+        public string CEDULA_PACIENTE { get; set; }
+        public string CEDULA_NUTRICIONISTA { get; set; }
+        public Nullable<System.DateTime> FECHA_CHEQUEO { get; set; }
     
         public virtual PACIENTE PACIENTE { get; set; }
+        public virtual NUTRICIONISTA NUTRICIONISTA { get; set; }
     }
 }

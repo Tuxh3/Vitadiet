@@ -18,6 +18,8 @@ namespace VitaDiet.Models
         public PACIENTE()
         {
             this.HISTORIAL = new HashSet<HISTORIAL>();
+            this.CHEQUEO = new HashSet<CHEQUEO>();
+            this.PQR = new HashSet<PQR>();
         }
     
         public string ID { get; set; }
@@ -32,8 +34,16 @@ namespace VitaDiet.Models
         public string TIEMPO_ESPERADO { get; set; }
         public string CELULAR { get; set; }
         public string CORREO { get; set; }
+        public string USUARIO_ID { get; set; }
+        public string DIETA_ID { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<HISTORIAL> HISTORIAL { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<CHEQUEO> CHEQUEO { get; set; }
+        public virtual DIETA DIETA { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<PQR> PQR { get; set; }
+        public virtual USUARIO USUARIO { get; set; }
     }
 }

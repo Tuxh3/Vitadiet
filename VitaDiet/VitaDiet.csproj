@@ -158,6 +158,15 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BaseDatosModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\CHEQUEO.cs">
+      <DependentUpon>BaseDatosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\COCINASet.cs">
+      <DependentUpon>BaseDatosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\COCINERO.cs">
+      <DependentUpon>BaseDatosModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\DIETA.cs">
       <DependentUpon>BaseDatosModel.tt</DependentUpon>
     </Compile>
