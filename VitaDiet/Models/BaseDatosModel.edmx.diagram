@@ -4,17 +4,17 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="4389cd89bc184a048deb79672a705273" Name="Diagram1">
-        <EntityTypeShape EntityType="VITADIETModel.DIETA" Width="1.5" PointX="0.75" PointY="5.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="VITADIETModel.HISTORIAL" Width="1.5" PointX="8" PointY="1.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="VITADIETModel.NUTRICIONISTA" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+      <Diagram DiagramId="4389cd89bc184a048deb79672a705273" Name="Diagram1" ZoomLevel="88">
+        <EntityTypeShape EntityType="VITADIETModel.DIETA" Width="1.5" PointX="0.75" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VITADIETModel.HISTORIAL" Width="1.5" PointX="8.125" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="VITADIETModel.NUTRICIONISTA" Width="1.5" PointX="3.125" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="VITADIETModel.PACIENTE" Width="1.5" PointX="5.75" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="VITADIETModel.PQR" Width="1.5" PointX="2.75" PointY="5.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="VITADIETModel.RUTA" Width="1.5" PointX="4.75" PointY="5.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="VITADIETModel.USUARIO" Width="1.5" PointX="0.75" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="VITADIETModel.PQR" Width="1.5" PointX="2.75" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VITADIETModel.RUTA" Width="1.5" PointX="4.75" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VITADIETModel.USUARIO" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
         <AssociationConnector Association="VITADIETModel.FK__HISTORIAL__IDPAC__182C9B23" ManuallyRouted="false" />
         <AssociationConnector Association="VITADIETModel.FK__NUTRICION__IDUSU__20C1E124" ManuallyRouted="false" />
-        <EntityTypeShape EntityType="VITADIETModel.DISTRIBUIDOR" Width="1.5" PointX="7.375" PointY="5.75" />
+        <EntityTypeShape EntityType="VITADIETModel.DISTRIBUIDOR" Width="1.5" PointX="6.75" PointY="5.25" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

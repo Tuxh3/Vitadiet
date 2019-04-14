@@ -14,27 +14,6 @@ namespace VitaDiet.Controllers
     {
         private VITADIETEntities db = new VITADIETEntities();
 
-        // GET: PacienteUsers
-        public ActionResult Index()
-        {
-            return View(db.PacienteUsers.ToList());
-        }
-
-        // GET: PacienteUsers/Details/5
-        public ActionResult Details(string id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            PacienteUser pacienteUser = db.PacienteUsers.Find(id);
-            if (pacienteUser == null)
-            {
-                return HttpNotFound();
-            }
-            return View(pacienteUser);
-        }
-
         // GET: PacienteUsers/Create
         public ActionResult Create()
         {
@@ -81,21 +60,6 @@ namespace VitaDiet.Controllers
             return View(pacienteUser);
         }
 
-        // GET: PacienteUsers/Edit/5
-        public ActionResult Edit(string id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            PacienteUser pacienteUser = db.PacienteUsers.Find(id);
-            if (pacienteUser == null)
-            {
-                return HttpNotFound();
-            }
-            return View(pacienteUser);
-        }
-
         // POST: PacienteUsers/Edit/5
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
@@ -110,32 +74,6 @@ namespace VitaDiet.Controllers
                 return RedirectToAction("Index");
             }
             return View(pacienteUser);
-        }
-
-        // GET: PacienteUsers/Delete/5
-        public ActionResult Delete(string id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            PacienteUser pacienteUser = db.PacienteUsers.Find(id);
-            if (pacienteUser == null)
-            {
-                return HttpNotFound();
-            }
-            return View(pacienteUser);
-        }
-
-        // POST: PacienteUsers/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(string id)
-        {
-            PacienteUser pacienteUser = db.PacienteUsers.Find(id);
-            db.PacienteUsers.Remove(pacienteUser);
-            db.SaveChanges();
-            return RedirectToAction("Index");
         }
 
         protected override void Dispose(bool disposing)

@@ -86,7 +86,7 @@
     <Property Name="CONTRASENA" Type="varchar" MaxLength="20" />
     <Property Name="USERNAME" Type="varchar" MaxLength="50" />
   </EntityType>
-  <Association Name="FK__HISTORIAL__IDPAC__5165187F">
+  <Association Name="FK__HISTORIAL__IDPAC__46E78A0C">
     <End Role="PACIENTE" Type="Self.PACIENTE" Multiplicity="0..1" />
     <End Role="HISTORIAL" Type="Self.HISTORIAL" Multiplicity="*" />
     <ReferentialConstraint>
@@ -98,7 +98,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__NUTRICION__IDUSU__5441852A">
+  <Association Name="FK__NUTRICION__IDUSU__47DBAE45">
     <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="0..1" />
     <End Role="NUTRICIONISTA" Type="Self.NUTRICIONISTA" Multiplicity="*" />
     <ReferentialConstraint>
@@ -119,11 +119,11 @@
     <EntitySet Name="PQR" EntityType="Self.PQR" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="RUTA" EntityType="Self.RUTA" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="USUARIO" EntityType="Self.USUARIO" Schema="dbo" store:Type="Tables" />
-    <AssociationSet Name="FK__HISTORIAL__IDPAC__5165187F" Association="Self.FK__HISTORIAL__IDPAC__5165187F">
+    <AssociationSet Name="FK__HISTORIAL__IDPAC__46E78A0C" Association="Self.FK__HISTORIAL__IDPAC__46E78A0C">
       <End Role="PACIENTE" EntitySet="PACIENTE" />
       <End Role="HISTORIAL" EntitySet="HISTORIAL" />
     </AssociationSet>
-    <AssociationSet Name="FK__NUTRICION__IDUSU__5441852A" Association="Self.FK__NUTRICION__IDUSU__5441852A">
+    <AssociationSet Name="FK__NUTRICION__IDUSU__47DBAE45" Association="Self.FK__NUTRICION__IDUSU__47DBAE45">
       <End Role="USUARIO" EntitySet="USUARIO" />
       <End Role="NUTRICIONISTA" EntitySet="NUTRICIONISTA" />
     </AssociationSet>
