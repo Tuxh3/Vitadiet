@@ -6,117 +6,111 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
-<<<<<<< HEAD
-using vitaDiet.Models;
-
-namespace vitaDiet.Controllers
-=======
 using VitaDiet.Models;
 
 namespace VitaDiet.Controllers
->>>>>>> origin/angey
 {
-    public class USUARIOsController : Controller
+    public class DISTRIBUIDORsController : Controller
     {
         private VITADIETEntities db = new VITADIETEntities();
 
-        // GET: USUARIOs
+        // GET: DISTRIBUIDORs
         public ActionResult Index()
         {
-            return View(db.USUARIO.ToList());
+            return View(db.DISTRIBUIDOR.ToList());
         }
 
-        // GET: USUARIOs/Details/5
+        // GET: DISTRIBUIDORs/Details/5
         public ActionResult Details(string id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            USUARIO uSUARIO = db.USUARIO.Find(id);
-            if (uSUARIO == null)
+            DISTRIBUIDOR dISTRIBUIDOR = db.DISTRIBUIDOR.Find(id);
+            if (dISTRIBUIDOR == null)
             {
                 return HttpNotFound();
             }
-            return View(uSUARIO);
+            return View(dISTRIBUIDOR);
         }
 
-        // GET: USUARIOs/Create
+        // GET: DISTRIBUIDORs/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: USUARIOs/Create
+        // POST: DISTRIBUIDORs/Create
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,ROL,CONTRASENA")] USUARIO uSUARIO)
+        public ActionResult Create([Bind(Include = "ID,CEDULA_NUTRICIONISTA,NOMBRE,APELLIDO,CELULAR,CORREO")] DISTRIBUIDOR dISTRIBUIDOR)
         {
             if (ModelState.IsValid)
             {
-                db.USUARIO.Add(uSUARIO);
+                db.DISTRIBUIDOR.Add(dISTRIBUIDOR);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(uSUARIO);
+            return View(dISTRIBUIDOR);
         }
 
-        // GET: USUARIOs/Edit/5
+        // GET: DISTRIBUIDORs/Edit/5
         public ActionResult Edit(string id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            USUARIO uSUARIO = db.USUARIO.Find(id);
-            if (uSUARIO == null)
+            DISTRIBUIDOR dISTRIBUIDOR = db.DISTRIBUIDOR.Find(id);
+            if (dISTRIBUIDOR == null)
             {
                 return HttpNotFound();
             }
-            return View(uSUARIO);
+            return View(dISTRIBUIDOR);
         }
 
-        // POST: USUARIOs/Edit/5
+        // POST: DISTRIBUIDORs/Edit/5
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,ROL,CONTRASENA")] USUARIO uSUARIO)
+        public ActionResult Edit([Bind(Include = "ID,CEDULA_NUTRICIONISTA,NOMBRE,APELLIDO,CELULAR,CORREO")] DISTRIBUIDOR dISTRIBUIDOR)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(uSUARIO).State = EntityState.Modified;
+                db.Entry(dISTRIBUIDOR).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(uSUARIO);
+            return View(dISTRIBUIDOR);
         }
 
-        // GET: USUARIOs/Delete/5
+        // GET: DISTRIBUIDORs/Delete/5
         public ActionResult Delete(string id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            USUARIO uSUARIO = db.USUARIO.Find(id);
-            if (uSUARIO == null)
+            DISTRIBUIDOR dISTRIBUIDOR = db.DISTRIBUIDOR.Find(id);
+            if (dISTRIBUIDOR == null)
             {
                 return HttpNotFound();
             }
-            return View(uSUARIO);
+            return View(dISTRIBUIDOR);
         }
 
-        // POST: USUARIOs/Delete/5
+        // POST: DISTRIBUIDORs/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(string id)
         {
-            USUARIO uSUARIO = db.USUARIO.Find(id);
-            db.USUARIO.Remove(uSUARIO);
+            DISTRIBUIDOR dISTRIBUIDOR = db.DISTRIBUIDOR.Find(id);
+            db.DISTRIBUIDOR.Remove(dISTRIBUIDOR);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

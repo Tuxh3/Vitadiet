@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="VITADIETModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="VITADIETModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="DIETA">
           <Key>
             <PropertyRef Name="ID" />
@@ -15,6 +15,43 @@
           <Property Name="COMIDA" Type="varchar" MaxLength="50" />
           <Property Name="DOMICILIO" Type="varchar" MaxLength="20" />
         </EntityType>
+<<<<<<< HEAD
+=======
+        <EntityType Name="DISTRIBUIDOR">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="CEDULA_NUTRICIONISTA" Type="int" />
+          <Property Name="NOMBRE" Type="varchar" MaxLength="30" />
+          <Property Name="APELLIDO" Type="varchar" MaxLength="30" />
+          <Property Name="CELULAR" Type="varchar" MaxLength="10" />
+          <Property Name="CORREO" Type="varchar" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="HISTORIAL">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="IDPACIENTE" Type="varchar" MaxLength="10" />
+          <Property Name="HISTORIAL" Type="varchar" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="NUTRICIONISTA">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="IDUSUARIO" Type="varchar" MaxLength="10" />
+          <Property Name="ID" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="NOMBRE" Type="varchar" MaxLength="30" />
+          <Property Name="APELLIDO" Type="varchar" MaxLength="30" />
+          <Property Name="FECHA_NACIMIENTO" Type="datetime" />
+          <Property Name="CEDULA_NUTRICIONISTA" Type="int" />
+          <Property Name="TARJETA_PROFESIONAL" Type="int" />
+          <Property Name="GENERO" Type="char" MaxLength="1" />
+          <Property Name="CELULAR" Type="varchar" MaxLength="10" />
+          <Property Name="CORREO" Type="varchar" MaxLength="30" />
+        </EntityType>
+>>>>>>> origin/angey
         <EntityType Name="PACIENTE">
           <Key>
             <PropertyRef Name="ID" />
@@ -40,13 +77,73 @@
           <Property Name="NOMBRE_PACIENTE" Type="varchar" MaxLength="50" />
           <Property Name="CALIFICACION" Type="int" />
         </EntityType>
+<<<<<<< HEAD
         <EntityContainer Name="VITADIETModelStoreContainer">
           <EntitySet Name="DIETA" EntityType="Self.DIETA" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="PACIENTE" EntityType="Self.PACIENTE" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="PQR" EntityType="Self.PQR" Schema="dbo" store:Type="Tables" />
+=======
+        <EntityType Name="RUTA">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="DESTINOS" Type="varchar" MaxLength="1" />
+          <Property Name="COCINAS" Type="varchar" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="USUARIO">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="ROL" Type="varchar" MaxLength="20" />
+          <Property Name="CONTRASENA" Type="varchar" MaxLength="20" />
+          <Property Name="USERNAME" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <Association Name="FK__HISTORIAL__IDPAC__5165187F">
+          <End Role="PACIENTE" Type="Self.PACIENTE" Multiplicity="0..1" />
+          <End Role="HISTORIAL" Type="Self.HISTORIAL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PACIENTE">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="HISTORIAL">
+              <PropertyRef Name="IDPACIENTE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__NUTRICION__IDUSU__5441852A">
+          <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="0..1" />
+          <End Role="NUTRICIONISTA" Type="Self.NUTRICIONISTA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="USUARIO">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="NUTRICIONISTA">
+              <PropertyRef Name="IDUSUARIO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="VITADIETModelStoreContainer">
+          <EntitySet Name="DIETA" EntityType="Self.DIETA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DISTRIBUIDOR" EntityType="Self.DISTRIBUIDOR" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HISTORIAL" EntityType="Self.HISTORIAL" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NUTRICIONISTA" EntityType="Self.NUTRICIONISTA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PACIENTE" EntityType="Self.PACIENTE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PQR" EntityType="Self.PQR" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="RUTA" EntityType="Self.RUTA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="USUARIO" EntityType="Self.USUARIO" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__HISTORIAL__IDPAC__5165187F" Association="Self.FK__HISTORIAL__IDPAC__5165187F">
+            <End Role="PACIENTE" EntitySet="PACIENTE" />
+            <End Role="HISTORIAL" EntitySet="HISTORIAL" />
+          </AssociationSet>
+          <AssociationSet Name="FK__NUTRICION__IDUSU__5441852A" Association="Self.FK__NUTRICION__IDUSU__5441852A">
+            <End Role="USUARIO" EntitySet="USUARIO" />
+            <End Role="NUTRICIONISTA" EntitySet="NUTRICIONISTA" />
+          </AssociationSet>
+>>>>>>> origin/angey
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="VITADIETModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -85,11 +182,81 @@
           <Property Name="NOMBRE_PACIENTE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="CALIFICACION" Type="Int32" />
         </EntityType>
+<<<<<<< HEAD
+=======
+        <EntityType Name="RUTA">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DESTINOS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="COCINAS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="USUARIO">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ROL" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="CONTRASENA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="NUTRICIONISTA" Relationship="Self.FK__NUTRICION__IDUSU__20C1E124" FromRole="USUARIO" ToRole="NUTRICIONISTA" />
+          <Property Name="USERNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <Association Name="FK__HISTORIAL__IDPAC__182C9B23">
+          <End Role="PACIENTE" Type="Self.PACIENTE" Multiplicity="0..1" />
+          <End Role="HISTORIAL" Type="Self.HISTORIAL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PACIENTE">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="HISTORIAL">
+              <PropertyRef Name="IDPACIENTE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__NUTRICION__IDUSU__20C1E124">
+          <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="0..1" />
+          <End Role="NUTRICIONISTA" Type="Self.NUTRICIONISTA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="USUARIO">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="NUTRICIONISTA">
+              <PropertyRef Name="IDUSUARIO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+>>>>>>> origin/angey
         <EntityContainer Name="VITADIETEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="DIETA" EntityType="Self.DIETA" />
           <EntitySet Name="PACIENTE" EntityType="Self.PACIENTE" />
           <EntitySet Name="PQR" EntityType="Self.PQR" />
+<<<<<<< HEAD
+=======
+          <EntitySet Name="RUTA" EntityType="Self.RUTA" />
+          <EntitySet Name="USUARIO" EntityType="Self.USUARIO" />
+          <AssociationSet Name="FK__HISTORIAL__IDPAC__182C9B23" Association="Self.FK__HISTORIAL__IDPAC__182C9B23">
+            <End Role="PACIENTE" EntitySet="PACIENTE" />
+            <End Role="HISTORIAL" EntitySet="HISTORIAL" />
+          </AssociationSet>
+          <AssociationSet Name="FK__NUTRICION__IDUSU__20C1E124" Association="Self.FK__NUTRICION__IDUSU__20C1E124">
+            <End Role="USUARIO" EntitySet="USUARIO" />
+            <End Role="NUTRICIONISTA" EntitySet="NUTRICIONISTA" />
+          </AssociationSet>
+          <EntitySet Name="DISTRIBUIDOR" EntityType="VITADIETModel.DISTRIBUIDOR" />
+>>>>>>> origin/angey
         </EntityContainer>
+        <EntityType Name="DISTRIBUIDOR">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="CEDULA_NUTRICIONISTA" Type="Int32" />
+          <Property Name="NOMBRE" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="APELLIDO" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="CELULAR" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="CORREO" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -134,6 +301,40 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+<<<<<<< HEAD
+=======
+          <EntitySetMapping Name="RUTA">
+            <EntityTypeMapping TypeName="VITADIETModel.RUTA">
+              <MappingFragment StoreEntitySet="RUTA">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="DESTINOS" ColumnName="DESTINOS" />
+                <ScalarProperty Name="COCINAS" ColumnName="COCINAS" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="USUARIO">
+            <EntityTypeMapping TypeName="VITADIETModel.USUARIO">
+              <MappingFragment StoreEntitySet="USUARIO">
+                <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ROL" ColumnName="ROL" />
+                <ScalarProperty Name="CONTRASENA" ColumnName="CONTRASENA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DISTRIBUIDOR">
+            <EntityTypeMapping TypeName="VITADIETModel.DISTRIBUIDOR">
+              <MappingFragment StoreEntitySet="DISTRIBUIDOR">
+                <ScalarProperty Name="CORREO" ColumnName="CORREO" />
+                <ScalarProperty Name="CELULAR" ColumnName="CELULAR" />
+                <ScalarProperty Name="APELLIDO" ColumnName="APELLIDO" />
+                <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+                <ScalarProperty Name="CEDULA_NUTRICIONISTA" ColumnName="CEDULA_NUTRICIONISTA" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+>>>>>>> origin/angey
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

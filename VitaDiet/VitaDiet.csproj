@@ -134,10 +134,19 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+<<<<<<< HEAD
     <Compile Include="Controllers\DIETAsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PACIENTEsController.cs" />
     <Compile Include="Controllers\PQRsController.cs" />
+=======
+    <Compile Include="Controllers\DISTRIBUIDORsController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\NUTRICIONISTAsController.cs" />
+    <Compile Include="Controllers\PacienteUsersController.cs" />
+    <Compile Include="Controllers\RUTAsController.cs" />
+    <Compile Include="Controllers\USUARIOsController.cs" />
+>>>>>>> origin/angey
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -159,9 +168,22 @@
     <Compile Include="Models\DIETA.cs">
       <DependentUpon>BaseDatosModel.tt</DependentUpon>
     </Compile>
+<<<<<<< HEAD
+=======
+    <Compile Include="Models\DISTRIBUIDOR.cs">
+      <DependentUpon>BaseDatosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\HISTORIAL.cs">
+      <DependentUpon>BaseDatosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\NUTRICIONISTA.cs">
+      <DependentUpon>BaseDatosModel.tt</DependentUpon>
+    </Compile>
+>>>>>>> origin/angey
     <Compile Include="Models\PACIENTE.cs">
       <DependentUpon>BaseDatosModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\PacienteUser.cs" />
     <Compile Include="Models\PQR.cs">
       <DependentUpon>BaseDatosModel.tt</DependentUpon>
     </Compile>
@@ -220,6 +242,7 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+<<<<<<< HEAD
     <Content Include="Views\DIETAs\Create.cshtml" />
     <Content Include="Views\DIETAs\Delete.cshtml" />
     <Content Include="Views\DIETAs\Details.cshtml" />
@@ -235,6 +258,29 @@
     <Content Include="Views\PQRs\Details.cshtml" />
     <Content Include="Views\PQRs\Edit.cshtml" />
     <Content Include="Views\PQRs\Index.cshtml" />
+=======
+    <Content Include="Views\NUTRICIONISTAs\Create.cshtml" />
+    <Content Include="Views\NUTRICIONISTAs\Delete.cshtml" />
+    <Content Include="Views\NUTRICIONISTAs\Details.cshtml" />
+    <Content Include="Views\NUTRICIONISTAs\Edit.cshtml" />
+    <Content Include="Views\NUTRICIONISTAs\Index.cshtml" />
+    <Content Include="Views\RUTAs\Create.cshtml" />
+    <Content Include="Views\RUTAs\Delete.cshtml" />
+    <Content Include="Views\RUTAs\Details.cshtml" />
+    <Content Include="Views\RUTAs\Edit.cshtml" />
+    <Content Include="Views\RUTAs\Index.cshtml" />
+    <Content Include="Views\DISTRIBUIDORs\Create.cshtml" />
+    <Content Include="Views\DISTRIBUIDORs\Delete.cshtml" />
+    <Content Include="Views\DISTRIBUIDORs\Details.cshtml" />
+    <Content Include="Views\DISTRIBUIDORs\Edit.cshtml" />
+    <Content Include="Views\DISTRIBUIDORs\Index.cshtml" />
+    <Content Include="Views\USUARIOs\Create.cshtml" />
+    <Content Include="Views\USUARIOs\Delete.cshtml" />
+    <Content Include="Views\USUARIOs\Details.cshtml" />
+    <Content Include="Views\USUARIOs\Edit.cshtml" />
+    <Content Include="Views\USUARIOs\Index.cshtml" />
+    <Content Include="Views\PacienteUsers\Create.cshtml" />
+>>>>>>> origin/angey
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
