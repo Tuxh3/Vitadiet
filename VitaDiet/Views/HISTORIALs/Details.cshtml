@@ -1,0 +1,42 @@
+﻿@model VitaDiet.Persistencia.HISTORIAL
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>HISTORIAL</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.HISTORIAL1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HISTORIAL1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HISTORIAL11)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HISTORIAL11)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PACIENTE.NOMBRE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PACIENTE.NOMBRE)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
