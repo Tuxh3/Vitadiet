@@ -18,8 +18,7 @@ namespace VitaDiet.Controllers
         // GET: NUTRICIONISTAs
         public ActionResult Index()
         {
-            var nUTRICIONISTA = db.NUTRICIONISTA.Include(n => n.USUARIO);
-            return View(nUTRICIONISTA.ToList());
+            return View(db.NUTRICIONISTA.ToList());
         }
 
         // GET: NUTRICIONISTAs/Details/5

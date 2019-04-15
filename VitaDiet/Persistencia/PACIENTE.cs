@@ -17,9 +17,9 @@ namespace VitaDiet.Persistencia
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public PACIENTE()
         {
-            this.HISTORIAL = new HashSet<HISTORIAL>();
             this.CHEQUEO = new HashSet<CHEQUEO>();
             this.PQR = new HashSet<PQR>();
+            this.HISTORIAL = new HashSet<HISTORIAL>();
         }
     
         public string ID { get; set; }
@@ -38,12 +38,12 @@ namespace VitaDiet.Persistencia
         public string DIETA_ID { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<HISTORIAL> HISTORIAL { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CHEQUEO> CHEQUEO { get; set; }
         public virtual DIETA DIETA { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PQR> PQR { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<HISTORIAL> HISTORIAL { get; set; }
         public virtual USUARIO USUARIO { get; set; }
     }
 }

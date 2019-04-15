@@ -189,6 +189,9 @@
     <Compile Include="Persistencia\RUTA.cs">
       <DependentUpon>BaseDatosModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Persistencia\sysdiagrams.cs">
+      <DependentUpon>BaseDatosModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Persistencia\USUARIO.cs">
       <DependentUpon>BaseDatosModel.tt</DependentUpon>
     </Compile>

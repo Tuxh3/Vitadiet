@@ -12,12 +12,12 @@ namespace VitaDiet.Persistencia
     using System;
     using System.Collections.Generic;
     
-    public partial class HISTORIAL
+    public partial class sysdiagrams
     {
-        public string ID { get; set; }
-        public string IDPACIENTE { get; set; }
-        public string HISTORIAL1 { get; set; }
-    
-        public virtual PACIENTE PACIENTE { get; set; }
+        public string name { get; set; }
+        public int principal_id { get; set; }
+        public int diagram_id { get; set; }
+        public Nullable<int> version { get; set; }
+        public byte[] definition { get; set; }
     }
 }

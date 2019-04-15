@@ -31,8 +31,8 @@ namespace VitaDiet.Persistencia
         public string CORREO { get; set; }
         public string IDUSUARIO { get; set; }
     
-        public virtual USUARIO USUARIO { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CHEQUEO> CHEQUEO { get; set; }
+        public virtual USUARIO USUARIO { get; set; }
     }
 }
