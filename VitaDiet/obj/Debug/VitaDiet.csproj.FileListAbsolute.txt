@@ -355,7 +355,6 @@ C:\Users\Tuxh\Desktop\vitade\Vitadiet\VitaDiet\bin\es\System.Web.Razor.resources
 C:\Users\Tuxh\Desktop\vitade\Vitadiet\VitaDiet\bin\es\System.Web.WebPages.resources.dll
 C:\Users\Tuxh\Desktop\vitade\Vitadiet\VitaDiet\bin\es\System.Web.WebPages.Deployment.resources.dll
 C:\Users\Tuxh\Desktop\vitade\Vitadiet\VitaDiet\bin\es\System.Web.WebPages.Razor.resources.dll
-C:\Users\Tuxh\Desktop\vitade\Vitadiet\VitaDiet\obj\Debug\VitaDiet.csprojAssemblyReference.cache
 C:\Users\Tuxh\Desktop\vitade\Vitadiet\VitaDiet\obj\Debug\VitaDiet.csproj.CoreCompileInputs.cache
 C:\Users\Tuxh\Desktop\vitade\Vitadiet\VitaDiet\obj\Debug\VitaDiet.csproj.CopyComplete
 C:\Users\Tuxh\Desktop\vitade\Vitadiet\VitaDiet\obj\Debug\VitaDiet.dll

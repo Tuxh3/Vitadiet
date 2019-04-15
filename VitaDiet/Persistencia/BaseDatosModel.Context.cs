@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace VitaDiet.Models
+namespace VitaDiet.Persistencia
 {
     using System;
     using System.Data.Entity;

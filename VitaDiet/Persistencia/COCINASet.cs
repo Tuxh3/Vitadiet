@@ -7,32 +7,25 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace VitaDiet.Models
+namespace VitaDiet.Persistencia
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class NUTRICIONISTA
+    public partial class COCINASet
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public NUTRICIONISTA()
+        public COCINASet()
         {
-            this.CHEQUEO = new HashSet<CHEQUEO>();
+            this.COCINERO = new HashSet<COCINERO>();
         }
     
-        public string ID { get; set; }
-        public string NOMBRE { get; set; }
-        public string APELLIDO { get; set; }
-        public Nullable<System.DateTime> FECHA_NACIMIENTO { get; set; }
-        public Nullable<int> CEDULA_NUTRICIONISTA { get; set; }
-        public Nullable<int> TARJETA_PROFESIONAL { get; set; }
-        public string GENERO { get; set; }
-        public string CELULAR { get; set; }
-        public string CORREO { get; set; }
-        public string IDUSUARIO { get; set; }
+        public int Id { get; set; }
+        public string UBICACION { get; set; }
+        public string RUTAID { get; set; }
     
-        public virtual USUARIO USUARIO { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<CHEQUEO> CHEQUEO { get; set; }
+        public virtual ICollection<COCINERO> COCINERO { get; set; }
+        public virtual RUTA RUTA { get; set; }
     }
 }

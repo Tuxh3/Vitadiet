@@ -143,53 +143,53 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\BaseDatosModel.Context.cs">
+    <Compile Include="Persistencia\BaseDatosModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>BaseDatosModel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\BaseDatosModel.cs">
+    <Compile Include="Persistencia\BaseDatosModel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>BaseDatosModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\BaseDatosModel.Designer.cs">
+    <Compile Include="Persistencia\BaseDatosModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>BaseDatosModel.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Models\CHEQUEO.cs">
+    <Compile Include="Persistencia\CHEQUEO.cs">
       <DependentUpon>BaseDatosModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\COCINASet.cs">
+    <Compile Include="Persistencia\COCINASet.cs">
       <DependentUpon>BaseDatosModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\COCINERO.cs">
+    <Compile Include="Persistencia\COCINERO.cs">
       <DependentUpon>BaseDatosModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\DIETA.cs">
+    <Compile Include="Persistencia\DIETA.cs">
       <DependentUpon>BaseDatosModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\DISTRIBUIDOR.cs">
+    <Compile Include="Persistencia\DISTRIBUIDOR.cs">
       <DependentUpon>BaseDatosModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\HISTORIAL.cs">
+    <Compile Include="Persistencia\HISTORIAL.cs">
       <DependentUpon>BaseDatosModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\NUTRICIONISTA.cs">
+    <Compile Include="Persistencia\NUTRICIONISTA.cs">
       <DependentUpon>BaseDatosModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\PACIENTE.cs">
+    <Compile Include="Persistencia\PACIENTE.cs">
       <DependentUpon>BaseDatosModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\PacienteUser.cs" />
-    <Compile Include="Models\PQR.cs">
+    <Compile Include="Persistencia\PQR.cs">
       <DependentUpon>BaseDatosModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\RUTA.cs">
+    <Compile Include="Persistencia\RUTA.cs">
       <DependentUpon>BaseDatosModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\USUARIO.cs">
+    <Compile Include="Persistencia\USUARIO.cs">
       <DependentUpon>BaseDatosModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -203,23 +203,23 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Models\BaseDatosModel.Context.tt">
+    <Content Include="Persistencia\BaseDatosModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>BaseDatosModel.Context.cs</LastGenOutput>
       <DependentUpon>BaseDatosModel.edmx</DependentUpon>
     </Content>
-    <Content Include="Models\BaseDatosModel.tt">
+    <Content Include="Persistencia\BaseDatosModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>BaseDatosModel.edmx</DependentUpon>
       <LastGenOutput>BaseDatosModel.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <EntityDeploy Include="Models\BaseDatosModel.edmx">
+    <EntityDeploy Include="Persistencia\BaseDatosModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>BaseDatosModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Models\BaseDatosModel.edmx.diagram">
+    <Content Include="Persistencia\BaseDatosModel.edmx.diagram">
       <DependentUpon>BaseDatosModel.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
@@ -271,6 +271,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Fachada\" />
+    <Folder Include="Lógica\Controladoras\" />
+    <Folder Include="Lógica\Entidades\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

@@ -7,24 +7,19 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace VitaDiet.Models
+namespace VitaDiet.Persistencia
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class COCINERO
+    public partial class CHEQUEO
     {
         public int ID { get; set; }
-        public string NOMBRE { get; set; }
-        public string CEDULA { get; set; }
-        public Nullable<System.DateTime> FECHA_NACIMIENTO { get; set; }
-        public string CIUDAD { get; set; }
-        public string GENERO { get; set; }
-        public string TELEFONO { get; set; }
-        public string USUARIOID { get; set; }
-        public int COCINAId { get; set; }
+        public string CEDULA_PACIENTE { get; set; }
+        public string CEDULA_NUTRICIONISTA { get; set; }
+        public Nullable<System.DateTime> FECHA_CHEQUEO { get; set; }
     
-        public virtual COCINASet COCINASet { get; set; }
-        public virtual USUARIO USUARIO { get; set; }
+        public virtual PACIENTE PACIENTE { get; set; }
+        public virtual NUTRICIONISTA NUTRICIONISTA { get; set; }
     }
 }
