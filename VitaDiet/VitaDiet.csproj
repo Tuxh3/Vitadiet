@@ -136,9 +136,10 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\DISTRIBUIDORsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\NUTRICIONISTAsController.cs" />
+    <Compile Include="Lógica\Controladoras\HISTORIALsController.cs" />
+    <Compile Include="Lógica\Controladoras\NUTRICIONISTAsController.cs" />
     <Compile Include="Controllers\PacienteUsersController.cs" />
-    <Compile Include="Controllers\RUTAsController.cs" />
+    <Compile Include="Lógica\Controladoras\RUTAsController.cs" />
     <Compile Include="Controllers\USUARIOsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -146,6 +147,8 @@
     <Compile Include="Lógica\Controladoras\DIETAsController.cs" />
     <Compile Include="Lógica\Controladoras\PACIENTEsController.cs" />
     <Compile Include="Lógica\Controladoras\PQRsController.cs" />
+    <Compile Include="Lógica\Entidades\Ruta.cs" />
+    <Compile Include="Lógica\Entidades\Nutricionista.cs" />
     <Compile Include="Lógica\Entidades\Dieta.cs" />
     <Compile Include="Lógica\Entidades\Paciente.cs" />
     <Compile Include="Lógica\Entidades\Pqr.cs" />
@@ -289,6 +292,11 @@
     <Content Include="Views\PQRs\Details.cshtml" />
     <Content Include="Views\PQRs\Edit.cshtml" />
     <Content Include="Views\PQRs\Index.cshtml" />
+    <Content Include="Views\HISTORIALs\Create.cshtml" />
+    <Content Include="Views\HISTORIALs\Delete.cshtml" />
+    <Content Include="Views\HISTORIALs\Details.cshtml" />
+    <Content Include="Views\HISTORIALs\Edit.cshtml" />
+    <Content Include="Views\HISTORIALs\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
