@@ -2,31 +2,47 @@
     ViewBag.Title = "VitaDiet";
 }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>@Html.ActionLink("Nutricionista", "Index", "NUTRICIONISTAs")</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+<body style="background-color:#000000">
+
+
+    <div id="container" class="container">
+        <div id="Header" class="Header"> <img height="328%" width="100%" src="https://image.jimcdn.com/app/cms/image/transf/none/path/s65824f513463eee3/image/i47b9bf9b0051ce5c/version/1546526469/image.jpg" /></div>
     </div>
-    <div class="col-md-4">
-        <h2>@Html.ActionLink("Rutas", "Index", "RUTAs")</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+    <div style="position:absolute; top:-10px; left:400px; visibility:visible"><img height="200" width="200" src="https://www.swees.eu/files/2017/08/logo-vitadiet-300x245.png" /></div>
+
+
+
+    <div class="row">
+        <div class="col-md-4">
+            <h2 style="font-size:20px; position:absolute; top:-650px; left:70px">@Html.ActionLink("PACIENTE", "index", "PACIENTEs")</h2>
+
+
+        </div>
+        <div class="col-md-4">
+            <h2 style="font-size:20px; position:absolute; top:-620px; right:640px">@Html.ActionLink("DIETAS", "index", "DIETAs")</h2>
+
+        </div>
+        <div class="col-md-4">
+            <h2 style="font-size:20px; position:absolute; top:-590px; right:960px">@Html.ActionLink("CALIFICACION", "index", "PQRs")</h2>
+
+        </div>
+
+        <div class="col-md-4">
+            <h2>@Html.ActionLink("Nutricionista", "Index", "NUTRICIONISTAs")</h2>
+            
+        </div>
+        <div class="col-md-4">
+            <h2>@Html.ActionLink("Rutas", "Index", "RUTAs")</h2>
+            
+        </div>
+        <div class="col-md-4">
+            <h2>@Html.ActionLink("Distibuidor", "Index", "DISTRIBUIDORs")</h2>
+        </div>
+        <div class="col-md-4">
+            <h2>@Html.ActionLink("Registrar Pacientes", "Create", "PacienteUsers")</h2>
+        </div>
     </div>
-    <div class="col-md-4">
-        <h2>@Html.ActionLink("Distibuidor", "Index", "DISTRIBUIDORs")</h2>
-    </div>
-    <div class="col-md-4">
-        <h2>@Html.ActionLink("Registrar Pacientes", "Create", "PacienteUsers")</h2>
-    </div>
-</div>
+
+    <div id="footer" class="footer"> <p style="color:#FFFFFF" ;>Derechos Reservados &copy; 2019 Laura Garcia - Cristian Tique - Kelly Orozco - Angey Velez - Andres Ocampo </p></div>
+</body>

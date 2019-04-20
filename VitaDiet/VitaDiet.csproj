@@ -143,6 +143,12 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Lógica\Controladoras\DIETAsController.cs" />
+    <Compile Include="Lógica\Controladoras\PACIENTEsController.cs" />
+    <Compile Include="Lógica\Controladoras\PQRsController.cs" />
+    <Compile Include="Lógica\Entidades\Dieta.cs" />
+    <Compile Include="Lógica\Entidades\Paciente.cs" />
+    <Compile Include="Lógica\Entidades\Pqr.cs" />
     <Compile Include="Persistencia\BaseDatosModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -187,9 +193,6 @@
       <DependentUpon>BaseDatosModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Persistencia\RUTA.cs">
-      <DependentUpon>BaseDatosModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Persistencia\sysdiagrams.cs">
       <DependentUpon>BaseDatosModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Persistencia\USUARIO.cs">
@@ -271,12 +274,25 @@
     <Content Include="Views\USUARIOs\Edit.cshtml" />
     <Content Include="Views\USUARIOs\Index.cshtml" />
     <Content Include="Views\PacienteUsers\Create.cshtml" />
+    <Content Include="Views\DIETAs\Create.cshtml" />
+    <Content Include="Views\DIETAs\Delete.cshtml" />
+    <Content Include="Views\DIETAs\Details.cshtml" />
+    <Content Include="Views\DIETAs\Edit.cshtml" />
+    <Content Include="Views\DIETAs\Index.cshtml" />
+    <Content Include="Views\PACIENTEs\Create.cshtml" />
+    <Content Include="Views\PACIENTEs\Delete.cshtml" />
+    <Content Include="Views\PACIENTEs\Details.cshtml" />
+    <Content Include="Views\PACIENTEs\Edit.cshtml" />
+    <Content Include="Views\PACIENTEs\Index.cshtml" />
+    <Content Include="Views\PQRs\Create.cshtml" />
+    <Content Include="Views\PQRs\Delete.cshtml" />
+    <Content Include="Views\PQRs\Details.cshtml" />
+    <Content Include="Views\PQRs\Edit.cshtml" />
+    <Content Include="Views\PQRs\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Fachada\" />
-    <Folder Include="Lógica\Controladoras\" />
-    <Folder Include="Lógica\Entidades\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
