@@ -134,10 +134,12 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\COCINEROesController.cs" />
     <Compile Include="Controllers\DISTRIBUIDORsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\NUTRICIONISTAsController.cs" />
     <Compile Include="Controllers\PacienteUsersController.cs" />
+    <Compile Include="Controllers\PQRsController.cs" />
     <Compile Include="Controllers\RUTAsController.cs" />
     <Compile Include="Controllers\USUARIOsController.cs" />
     <Compile Include="Global.asax.cs">
@@ -187,9 +189,6 @@
       <DependentUpon>BaseDatosModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Persistencia\RUTA.cs">
-      <DependentUpon>BaseDatosModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Persistencia\sysdiagrams.cs">
       <DependentUpon>BaseDatosModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Persistencia\USUARIO.cs">
@@ -271,6 +270,16 @@
     <Content Include="Views\USUARIOs\Edit.cshtml" />
     <Content Include="Views\USUARIOs\Index.cshtml" />
     <Content Include="Views\PacienteUsers\Create.cshtml" />
+    <Content Include="Views\COCINEROes\Create.cshtml" />
+    <Content Include="Views\COCINEROes\Delete.cshtml" />
+    <Content Include="Views\COCINEROes\Details.cshtml" />
+    <Content Include="Views\COCINEROes\Edit.cshtml" />
+    <Content Include="Views\COCINEROes\Index.cshtml" />
+    <Content Include="Views\PQRs\Create.cshtml" />
+    <Content Include="Views\PQRs\Delete.cshtml" />
+    <Content Include="Views\PQRs\Details.cshtml" />
+    <Content Include="Views\PQRs\Edit.cshtml" />
+    <Content Include="Views\PQRs\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -21,7 +21,6 @@
         <AssociationConnector Association="VITADIETModel.FK_PACIENTEDIETA" />
         <AssociationConnector Association="VITADIETModel.FK_DISTRIBUIDORRUTA" />
         <AssociationConnector Association="VITADIETModel.FK_PACIENTEPQR" />
-        <EntityTypeShape EntityType="VITADIETModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="8.75" />
         <EntityTypeShape EntityType="VITADIETModel.HISTORIAL" Width="1.5" PointX="8" PointY="1.5" />
         <EntityTypeShape EntityType="VITADIETModel.USUARIO" Width="1.5" PointX="0.875" PointY="1.25" />
         <AssociationConnector Association="VITADIETModel.FK_USUARIOCOCINERO" />

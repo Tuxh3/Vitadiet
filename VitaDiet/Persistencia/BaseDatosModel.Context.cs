@@ -34,7 +34,6 @@ namespace VitaDiet.Persistencia
         public virtual DbSet<CHEQUEO> CHEQUEO { get; set; }
         public virtual DbSet<COCINASet> COCINASet { get; set; }
         public virtual DbSet<COCINERO> COCINERO { get; set; }
-        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<HISTORIAL> HISTORIAL { get; set; }
         public virtual DbSet<USUARIO> USUARIO { get; set; }
     }
