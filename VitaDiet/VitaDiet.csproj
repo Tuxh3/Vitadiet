@@ -136,6 +136,8 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\DISTRIBUIDORsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Lógica\Controladoras\CHEQUEOsController.cs" />
+    <Compile Include="Lógica\Controladoras\COCINEROesController.cs" />
     <Compile Include="Lógica\Controladoras\HISTORIALsController.cs" />
     <Compile Include="Lógica\Controladoras\NUTRICIONISTAsController.cs" />
     <Compile Include="Controllers\PacienteUsersController.cs" />
@@ -147,6 +149,7 @@
     <Compile Include="Lógica\Controladoras\DIETAsController.cs" />
     <Compile Include="Lógica\Controladoras\PACIENTEsController.cs" />
     <Compile Include="Lógica\Controladoras\PQRsController.cs" />
+    <Compile Include="Lógica\Entidades\Cocinero.cs" />
     <Compile Include="Lógica\Entidades\Ruta.cs" />
     <Compile Include="Lógica\Entidades\Nutricionista.cs" />
     <Compile Include="Lógica\Entidades\Dieta.cs" />
@@ -297,6 +300,16 @@
     <Content Include="Views\HISTORIALs\Details.cshtml" />
     <Content Include="Views\HISTORIALs\Edit.cshtml" />
     <Content Include="Views\HISTORIALs\Index.cshtml" />
+    <Content Include="Views\COCINEROes\Create.cshtml" />
+    <Content Include="Views\COCINEROes\Delete.cshtml" />
+    <Content Include="Views\COCINEROes\Details.cshtml" />
+    <Content Include="Views\COCINEROes\Edit.cshtml" />
+    <Content Include="Views\COCINEROes\Index.cshtml" />
+    <Content Include="Views\CHEQUEOs\Create.cshtml" />
+    <Content Include="Views\CHEQUEOs\Delete.cshtml" />
+    <Content Include="Views\CHEQUEOs\Details.cshtml" />
+    <Content Include="Views\CHEQUEOs\Edit.cshtml" />
+    <Content Include="Views\CHEQUEOs\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
