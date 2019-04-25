@@ -1,0 +1,42 @@
+﻿@model VitaDiet.Persistencia.CHEQUEO
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CHEQUEO</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FECHA_CHEQUEO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FECHA_CHEQUEO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PACIENTE.NOMBRE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PACIENTE.NOMBRE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NUTRICIONISTA.NOMBRE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NUTRICIONISTA.NOMBRE)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
