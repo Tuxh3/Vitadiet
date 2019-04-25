@@ -28,7 +28,6 @@ namespace VitaDiet.Persistencia
         public virtual DbSet<DIETA> DIETA { get; set; }
         public virtual DbSet<NUTRICIONISTA> NUTRICIONISTA { get; set; }
         public virtual DbSet<PACIENTE> PACIENTE { get; set; }
-        public virtual DbSet<PQR> PQR { get; set; }
         public virtual DbSet<RUTA> RUTA { get; set; }
         public virtual DbSet<DISTRIBUIDOR> DISTRIBUIDOR { get; set; }
         public virtual DbSet<CHEQUEO> CHEQUEO { get; set; }
@@ -36,5 +35,6 @@ namespace VitaDiet.Persistencia
         public virtual DbSet<COCINERO> COCINERO { get; set; }
         public virtual DbSet<HISTORIAL> HISTORIAL { get; set; }
         public virtual DbSet<USUARIO> USUARIO { get; set; }
+        public virtual DbSet<PQR> PQR { get; set; }
     }
 }

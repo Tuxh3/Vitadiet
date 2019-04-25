@@ -15,7 +15,6 @@ namespace VitaDiet.Persistencia
     public partial class PQR
     {
         public string ID { get; set; }
-        public string NOMBRE_PACIENTE { get; set; }
         public Nullable<int> CALIFICACION { get; set; }
         public string PACIENTEID { get; set; }
     

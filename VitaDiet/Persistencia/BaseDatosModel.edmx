@@ -105,7 +105,6 @@
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="varchar" MaxLength="10" Nullable="false" />
-          <Property Name="NOMBRE_PACIENTE" Type="varchar" MaxLength="50" />
           <Property Name="CALIFICACION" Type="int" />
           <Property Name="PACIENTEID" Type="varchar" MaxLength="10" Nullable="false" />
         </EntityType>
@@ -384,19 +383,9 @@
           <Property Name="DIETA_ID" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="CHEQUEO" Relationship="VITADIETModel.FK__CHEQUEO__CEDULA___24927208" FromRole="PACIENTE" ToRole="CHEQUEO" />
           <NavigationProperty Name="DIETA" Relationship="VITADIETModel.FK_PACIENTEDIETA" FromRole="PACIENTE" ToRole="DIETA" />
-          <NavigationProperty Name="PQR" Relationship="VITADIETModel.FK_PACIENTEPQR" FromRole="PACIENTE" ToRole="PQR" />
           <NavigationProperty Name="HISTORIAL" Relationship="VITADIETModel.FK__HISTORIAL__IDPAC__182C9B23" FromRole="PACIENTE" ToRole="HISTORIAL" />
           <NavigationProperty Name="USUARIO" Relationship="VITADIETModel.FK_USUARIOPACIENTE" FromRole="PACIENTE" ToRole="USUARIO" />
-        </EntityType>
-        <EntityType Name="PQR">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="NOMBRE_PACIENTE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="CALIFICACION" Type="Int32" />
-          <Property Name="PACIENTEID" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="PACIENTE" Relationship="VITADIETModel.FK_PACIENTEPQR" FromRole="PQR" ToRole="PACIENTE" />
+          <NavigationProperty Name="PQR" Relationship="VITADIETModel.FK_PACIENTEPQR" FromRole="PACIENTE" ToRole="PQR" />
         </EntityType>
         <EntityType Name="RUTA">
           <Key>
@@ -413,7 +402,6 @@
           <EntitySet Name="DIETA" EntityType="Self.DIETA" />
           <EntitySet Name="NUTRICIONISTA" EntityType="Self.NUTRICIONISTA" />
           <EntitySet Name="PACIENTE" EntityType="Self.PACIENTE" />
-          <EntitySet Name="PQR" EntityType="Self.PQR" />
           <EntitySet Name="RUTA" EntityType="Self.RUTA" />
           <EntitySet Name="DISTRIBUIDOR" EntityType="VITADIETModel.DISTRIBUIDOR" />
           <EntitySet Name="CHEQUEO" EntityType="VITADIETModel.CHEQUEO" />
@@ -443,10 +431,6 @@
             <End Role="DISTRIBUIDOR" EntitySet="DISTRIBUIDOR" />
             <End Role="RUTA" EntitySet="RUTA" />
           </AssociationSet>
-          <AssociationSet Name="FK_PACIENTEPQR" Association="VITADIETModel.FK_PACIENTEPQR">
-            <End Role="PACIENTE" EntitySet="PACIENTE" />
-            <End Role="PQR" EntitySet="PQR" />
-          </AssociationSet>
           <EntitySet Name="HISTORIAL" EntityType="VITADIETModel.HISTORIAL" />
           <EntitySet Name="USUARIO" EntityType="VITADIETModel.USUARIO" />
           <AssociationSet Name="FK_USUARIOCOCINERO" Association="VITADIETModel.FK_USUARIOCOCINERO">
@@ -468,6 +452,11 @@
           <AssociationSet Name="FK_USUARIOPACIENTE" Association="VITADIETModel.FK_USUARIOPACIENTE">
             <End Role="USUARIO" EntitySet="USUARIO" />
             <End Role="PACIENTE" EntitySet="PACIENTE" />
+          </AssociationSet>
+          <EntitySet Name="PQR" EntityType="VITADIETModel.PQR" />
+          <AssociationSet Name="FK_PACIENTEPQR" Association="VITADIETModel.FK_PACIENTEPQR">
+            <End Role="PACIENTE" EntitySet="PACIENTE" />
+            <End Role="PQR" EntitySet="PQR" />
           </AssociationSet>
         </EntityContainer>
         <EntityType Name="DISTRIBUIDOR">
@@ -593,18 +582,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_PACIENTEPQR">
-          <End Type="VITADIETModel.PACIENTE" Role="PACIENTE" Multiplicity="1" />
-          <End Type="VITADIETModel.PQR" Role="PQR" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="PACIENTE">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="PQR">
-              <PropertyRef Name="PACIENTEID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <EntityType Name="HISTORIAL">
           <Key>
             <PropertyRef Name="ID" />
@@ -687,6 +664,27 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="PQR">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="CALIFICACION" Type="Int32" />
+          <Property Name="PACIENTEID" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="PACIENTE" Relationship="VITADIETModel.FK_PACIENTEPQR" FromRole="PQR" ToRole="PACIENTE" />
+        </EntityType>
+        <Association Name="FK_PACIENTEPQR">
+          <End Type="VITADIETModel.PACIENTE" Role="PACIENTE" Multiplicity="1" />
+          <End Type="VITADIETModel.PQR" Role="PQR" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PACIENTE">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PQR">
+              <PropertyRef Name="PACIENTEID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -737,16 +735,6 @@
                 <ScalarProperty Name="TIEMPO_ESPERADO" ColumnName="TIEMPO_ESPERADO" />
                 <ScalarProperty Name="CELULAR" ColumnName="CELULAR" />
                 <ScalarProperty Name="CORREO" ColumnName="CORREO" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="PQR">
-            <EntityTypeMapping TypeName="VITADIETModel.PQR">
-              <MappingFragment StoreEntitySet="PQR">
-                <ScalarProperty Name="PACIENTEID" ColumnName="PACIENTEID" />
-                <ScalarProperty Name="ID" ColumnName="ID" />
-                <ScalarProperty Name="NOMBRE_PACIENTE" ColumnName="NOMBRE_PACIENTE" />
-                <ScalarProperty Name="CALIFICACION" ColumnName="CALIFICACION" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -822,6 +810,15 @@
                 <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
                 <ScalarProperty Name="CONTRASENA" ColumnName="CONTRASENA" />
                 <ScalarProperty Name="ROL" ColumnName="ROL" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PQR">
+            <EntityTypeMapping TypeName="VITADIETModel.PQR">
+              <MappingFragment StoreEntitySet="PQR">
+                <ScalarProperty Name="PACIENTEID" ColumnName="PACIENTEID" />
+                <ScalarProperty Name="CALIFICACION" ColumnName="CALIFICACION" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>
